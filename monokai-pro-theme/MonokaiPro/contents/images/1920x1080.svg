@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <!-- Ana arka plan gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1719"/>
+      <stop offset="50%" style="stop-color:#2D2A2E"/>
+      <stop offset="100%" style="stop-color:#221F22"/>
+    </linearGradient>
+    
+    <!-- Pembe accent glow -->
+    <radialGradient id="pinkGlow" cx="85%" cy="15%" r="45%">
+      <stop offset="0%" style="stop-color:#FF6188;stop-opacity:0.15"/>
+      <stop offset="60%" style="stop-color:#FF6188;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#FF6188;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Mor accent glow -->
+    <radialGradient id="purpleGlow" cx="10%" cy="85%" r="50%">
+      <stop offset="0%" style="stop-color:#AB9DF2;stop-opacity:0.12"/>
+      <stop offset="50%" style="stop-color:#AB9DF2;stop-opacity:0.04"/>
+      <stop offset="100%" style="stop-color:#AB9DF2;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Cyan accent glow -->
+    <radialGradient id="cyanGlow" cx="70%" cy="70%" r="35%">
+      <stop offset="0%" style="stop-color:#78DCE8;stop-opacity:0.08"/>
+      <stop offset="60%" style="stop-color:#78DCE8;stop-opacity:0.02"/>
+      <stop offset="100%" style="stop-color:#78DCE8;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Subtle noise texture -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    
+    <!-- Blur for shapes -->
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="120"/>
+    </filter>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+  </defs>
+  
+  <!-- Ana arka plan -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)"/>
+  
+  <!-- Glow katmanları -->
+  <rect width="1920" height="1080" fill="url(#pinkGlow)"/>
+  <rect width="1920" height="1080" fill="url(#purpleGlow)"/>
+  <rect width="1920" height="1080" fill="url(#cyanGlow)"/>
+  
+  <!-- Fluent tarzı şekiller -->
+  <ellipse cx="1600" cy="150" rx="400" ry="300" fill="#FF6188" opacity="0.06" filter="url(#blur1)"/>
+  <ellipse cx="200" cy="900" rx="500" ry="350" fill="#AB9DF2" opacity="0.05" filter="url(#blur2)"/>
+  <ellipse cx="1400" cy="800" rx="300" ry="200" fill="#78DCE8" opacity="0.04" filter="url(#blur1)"/>
+  <ellipse cx="960" cy="540" rx="200" ry="150" fill="#FC9867" opacity="0.03" filter="url(#blur3)"/>
+  
+  <!-- Subtle geometric accents -->
+  <circle cx="1750" cy="100" r="60" fill="none" stroke="#FF6188" stroke-width="1" opacity="0.15"/>
+  <circle cx="1750" cy="100" r="90" fill="none" stroke="#FF6188" stroke-width="0.5" opacity="0.1"/>
+  <circle cx="150" cy="950" r="50" fill="none" stroke="#AB9DF2" stroke-width="1" opacity="0.12"/>
+  <circle cx="150" cy="950" r="80" fill="none" stroke="#AB9DF2" stroke-width="0.5" opacity="0.08"/>
+  
+  <!-- Diagonal subtle lines -->
+  <line x1="0" y1="1080" x2="600" y2="700" stroke="#403E41" stroke-width="1" opacity="0.3"/>
+  <line x1="1920" y1="0" x2="1400" y2="350" stroke="#403E41" stroke-width="1" opacity="0.25"/>
+  
+  <!-- Subtle grid pattern overlay -->
+  <g opacity="0.02">
+    <line x1="480" y1="0" x2="480" y2="1080" stroke="#FCFCFA" stroke-width="1"/>
+    <line x1="960" y1="0" x2="960" y2="1080" stroke="#FCFCFA" stroke-width="1"/>
+    <line x1="1440" y1="0" x2="1440" y2="1080" stroke="#FCFCFA" stroke-width="1"/>
+    <line x1="0" y1="270" x2="1920" y2="270" stroke="#FCFCFA" stroke-width="1"/>
+    <line x1="0" y1="540" x2="1920" y2="540" stroke="#FCFCFA" stroke-width="1"/>
+    <line x1="0" y1="810" x2="1920" y2="810" stroke="#FCFCFA" stroke-width="1"/>
+  </g>
+  
+  <!-- Noise overlay for texture -->
+  <rect width="1920" height="1080" fill="#2D2A2E" opacity="0.03" filter="url(#noise)"/>
+</svg>

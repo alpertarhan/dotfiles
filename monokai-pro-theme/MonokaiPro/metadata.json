@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "monokai@local",
+                "Name": "Monokai Pro Theme"
+            }
+        ],
+        "Id": "MonokaiPro",
+        "License": "CC-BY-SA-4.0",
+        "Name": "Monokai Pro"
+    }
+}
